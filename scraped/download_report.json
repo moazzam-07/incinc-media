@@ -1,0 +1,85 @@
+{
+  "downloaded": [
+    {
+      "url": "https://incincmedia.com/assets/images/background/banner-bg.jpg",
+      "local": "scraped/media/images\\banner-bg.jpg",
+      "size": 318355
+    },
+    {
+      "url": "https://incincmedia.com/assets/images/febble-logo.webp",
+      "local": "scraped/media/images\\febble-logo.webp",
+      "size": 30240
+    },
+    {
+      "url": "https://incincmedia.com/assets/images/logo.jpg",
+      "local": "scraped/media/images\\logo.jpg",
+      "size": 43600
+    },
+    {
+      "url": "https://incincmedia.com/assets/images/logo.png",
+      "local": "scraped/media/images\\logo.png",
+      "size": 37127
+    },
+    {
+      "url": "https://incincmedia.com/assets/images/misc/about-office.jpg",
+      "local": "scraped/media/images\\about-office.jpg",
+      "size": 472470
+    },
+    {
+      "url": "https://incincmedia.com/assets/images/misc/about-team.jpg",
+      "local": "scraped/media/images\\about-team.jpg",
+      "size": 587029
+    },
+    {
+      "url": "https://incincmedia.com/assets/images/misc/define.jpg",
+      "local": "scraped/media/images\\define.jpg",
+      "size": 51195
+    },
+    {
+      "url": "https://incincmedia.com/assets/images/misc/deliver.jpeg",
+      "local": "scraped/media/images\\deliver.jpeg",
+      "size": 58789
+    },
+    {
+      "url": "https://incincmedia.com/assets/images/misc/deploy.jpeg",
+      "local": "scraped/media/images\\deploy.jpeg",
+      "size": 64993
+    },
+    {
+      "url": "https://incincmedia.com/assets/images/misc/design.jpg",
+      "local": "scraped/media/images\\design.jpg",
+      "size": 69732
+    },
+    {
+      "url": "https://incincmedia.com/assets/images/misc/develop.jpeg",
+      "local": "scraped/media/images\\develop.jpeg",
+      "size": 70034
+    },
+    {
+      "url": "https://incincmedia.com/assets/images/misc/discover.jpg",
+      "local": "scraped/media/images\\discover.jpg",
+      "size": 64256
+    },
+    {
+      "url": "https://incincmedia.com/assets/images/misc/form-graphic.svg",
+      "local": "scraped/media/images\\form-graphic.svg",
+      "size": 11752
+    },
+    {
+      "url": "https://incincmedia.com/assets/images/slider/1.jpg",
+      "local": "scraped/media/images\\1.jpg",
+      "size": 77065
+    },
+    {
+      "url": "https://incincmedia.com/assets/images/slider/2.jpg",
+      "local": "scraped/media/images\\2.jpg",
+      "size": 106327
+    },
+    {
+      "url": "https://incincmedia.com/assets/mp4/video-t_Mub37E.mp4",
+      "local": "scraped/media/videos\\video-t_Mub37E.mp4",
+      "size": 20797762
+    }
+  ],
+  "failed": []
+}
