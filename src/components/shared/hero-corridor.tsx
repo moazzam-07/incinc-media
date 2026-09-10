@@ -3,8 +3,7 @@
 import * as React from "react";
 import Link from "next/link";
 import { ImageStreamHero, type StreamImage } from "@/components/ui/image-stream-hero";
-import { Button } from "@/components/ui/button";
-import { ArrowRight, Sparkles } from "lucide-react";
+import { ArrowRight, Play, Sparkles } from "lucide-react";
 
 // Portfolio showcases streaming in the 3D perspective corridor
 const PORTFOLIO_STREAM_IMAGES: StreamImage[] = [
@@ -60,55 +59,82 @@ const PORTFOLIO_STREAM_IMAGES: StreamImage[] = [
 
 export function HeroCorridor() {
   return (
-    <section className="relative w-full pt-28 pb-16 md:pt-36 md:pb-24 overflow-hidden bg-white">
+    <section className="relative w-full pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden bg-[#000000] text-white">
+      {/* Ambient Apple Keynote Glow (Top Radial Light) */}
+      <div
+        aria-hidden
+        className="pointer-events-none absolute -top-40 left-1/2 -translate-x-1/2 w-[800px] sm:w-[1100px] h-[500px] bg-[radial-gradient(ellipse_at_center,rgba(0,113,227,0.22),rgba(41,151,255,0.08)_40%,transparent_70%)] blur-[80px]"
+      />
+
       <ImageStreamHero
         images={PORTFOLIO_STREAM_IMAGES}
-        cards={10}
-        speed={22}
+        cards={11}
+        speed={24}
         axis={52}
-        className="h-[620px] sm:h-[680px] lg:h-[740px] w-full"
+        className="h-[640px] sm:h-[720px] lg:h-[780px] w-full"
       >
-        <div className="relative z-10 flex h-full flex-col items-center justify-between py-12 px-6 text-center">
-          {/* Eyebrow Pill */}
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#f3f3f3] border border-[#e0e0e0]/70 text-xs font-semibold text-[#141414] tracking-tight mb-4">
-            <Sparkles className="w-3.5 h-3.5 text-[#141414]" />
-            <span>Digital Solutions & Creative Powerhouse</span>
+        {/* Soft Vignette Overlay to ensure text readability */}
+        <div
+          aria-hidden
+          className="pointer-events-none absolute inset-0 z-1 bg-[radial-gradient(ellipse_at_center,rgba(0,0,0,0.85)_0%,rgba(0,0,0,0.65)_50%,rgba(0,0,0,0.3)_100%)]"
+        />
+
+        <div className="relative z-10 flex h-full flex-col items-center justify-between py-8 sm:py-12 px-6 text-center">
+          {/* Apple Keynote Eyebrow Capsule */}
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full apple-glass-dark border border-white/15 text-xs font-medium text-white/90 shadow-[0_4px_20px_rgba(0,0,0,0.5)] mb-4 select-none">
+            <Sparkles className="w-3.5 h-3.5 text-[#2997ff]" />
+            <span className="tracking-wide">Creative Powerhouse & Digital Engineering</span>
           </div>
 
-          {/* Centered Headline with Mobbin typography voice: 652 weight, tight 1.0 leading, terminal period */}
+          {/* Monolithic Apple Headline */}
           <div className="max-w-4xl mx-auto space-y-4">
-            <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-[#141414] leading-[1.05]">
-              Bring your vision to life with Incinc Media.
+            <h1 className="text-4xl sm:text-6xl lg:text-7xl font-semibold tracking-[-0.035em] text-white leading-[1.05]">
+              <span className="bg-gradient-to-b from-white via-white/95 to-white/60 bg-clip-text text-transparent">
+                Bring your vision to life.
+              </span>
+              <br />
+              <span className="text-[#2997ff] drop-shadow-[0_0_35px_rgba(41,151,255,0.3)]">
+                With Incinc Media.
+              </span>
             </h1>
-            <p className="max-w-2xl mx-auto text-lg sm:text-xl font-light text-[#707070] leading-relaxed">
-              Your dream. Our expertise. A future built together. We craft
-              scalable software, cinematic media, and distinct brand identities
-              for 300+ clients worldwide.
+            <p className="max-w-2xl mx-auto text-base sm:text-lg font-normal text-[#86868b] leading-relaxed">
+              Your dream. Our expertise. A future built together. We architect scalable enterprise software, cinematic media productions, and enduring brand identities for 300+ global brands.
             </p>
           </div>
 
-          {/* Action CTAs in Stadium Pills */}
-          <div className="flex flex-col sm:flex-row items-center gap-3.5 mt-6">
-            <Link href="#contact">
-              <Button
-                variant="primary"
-                size="lg"
-                className="gap-2.5 rounded-full font-medium"
-              >
-                <span>Start a Project</span>
-                <ArrowRight className="w-4 h-4" />
-              </Button>
+          {/* Apple Stadium Pill CTAs */}
+          <div className="flex flex-col sm:flex-row items-center gap-4 mt-6">
+            <Link
+              href="#contact"
+              className="inline-flex items-center gap-2.5 px-7 py-3 rounded-full text-sm font-semibold bg-[#0071e3] hover:bg-[#0077ed] text-white shadow-[0_4px_20px_rgba(0,113,227,0.45),inset_0_1px_0_rgba(255,255,255,0.35)] transition-all hover:scale-[1.02] active:scale-[0.98]"
+            >
+              <span>Start a Project</span>
+              <ArrowRight className="w-4 h-4" />
             </Link>
 
-            <Link href="#works">
-              <Button
-                variant="outline"
-                size="lg"
-                className="rounded-full font-medium"
-              >
-                Explore Works ↗
-              </Button>
+            <Link
+              href="#cinema"
+              className="inline-flex items-center gap-2.5 px-6 py-3 rounded-full text-sm font-medium apple-glass-dark text-white/90 hover:text-white hover:bg-white/10 border border-white/15 transition-all hover:scale-[1.02] active:scale-[0.98]"
+            >
+              <Play className="w-3.5 h-3.5 fill-white text-white" />
+              <span>Watch 2026 Showreel</span>
             </Link>
+          </div>
+
+          {/* Trust Metric Micro Ticker */}
+          <div className="flex items-center gap-6 sm:gap-10 pt-4 text-xs font-medium text-[#86868b]">
+            <div className="flex items-center gap-2">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#2997ff]" />
+              <span>300+ Global Clients</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#10b981]" />
+              <span>150+ Flagship Builds</span>
+            </div>
+            <div className="hidden sm:flex items-center gap-2">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#a855f7]" />
+              <span>Mumbai Studio & Labs</span>
+            </div>
           </div>
         </div>
       </ImageStreamHero>

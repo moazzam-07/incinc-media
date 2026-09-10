@@ -56,7 +56,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={inter.variable}>
-      <body className="antialiased min-h-screen flex flex-col bg-white text-[#141414]">
+      <body className="antialiased min-h-screen flex flex-col bg-[#000000] text-[#f5f5f7] selection:bg-[#0071e3] selection:text-white">
         <NavPill />
         <main className="flex-1 w-full">{children}</main>
         <InvertedFooter />
