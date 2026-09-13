@@ -84,7 +84,6 @@ export function BrandMarquee() {
         <div className="relative mx-auto flex items-center justify-center max-w-[1360px] px-4">
           <Carousel
             opts={{ loop: true, align: 'center' }}
-            plugins={[AutoScroll({ playOnInit: true, speed: 0.85 })]}
             plugins={[AutoScroll({ playOnInit: true, speed: 0.5 })]}
             className="w-full"
           >

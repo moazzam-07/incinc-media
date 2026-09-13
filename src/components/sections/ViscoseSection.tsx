@@ -61,10 +61,8 @@ export function ViscoseSection() {
     <div
       ref={trackRef}
       id="showcase-ring"
-      className="relative w-full h-[350vh] bg-[#fafafa] snap-start"
       className="relative w-full h-[550vh] bg-[#fafafa] snap-start"
     >
-      {/* Sticky Viewport: Pins full-screen for the duration of the 350vh track */}
       {/* Sticky Viewport: Pins full-screen for the duration of the 550vh track */}
       <section
         aria-label="Interactive 3D Portfolio Ring"
