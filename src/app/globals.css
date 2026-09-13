@@ -1,186 +1,97 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-@theme inline {
-  /* ─── Apple Visual Theme Tokens ─── */
-  --color-apple-black: #000000;
-  --color-apple-oled: #08080a;
-  --color-apple-dark: #121214;
-  --color-apple-elevated: #1d1d1f;
-  --color-apple-card-dark: #0e0f13;
-  --color-apple-border-dark: rgba(255, 255, 255, 0.10);
+@font-face {
+  font-family: "Satoshi";
+  src: url("/Satoshi-Regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Satoshi";
+  src: url("/Satoshi-Medium.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Geist";
+  src: url("/Geist-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PP Neue Montreal";
+  src: url("/ppneuemontreal-book.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@layer base {
+  * {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
   
-  --color-apple-light: #f5f5f7;
-  --color-apple-white: #ffffff;
-  --color-apple-border-light: rgba(0, 0, 0, 0.08);
-
-  /* ─── Apple Blue Accents ─── */
-  --color-apple-blue: #0071e3;          /* Light mode interactive */
-  --color-apple-blue-bright: #2997ff;   /* Dark mode interactive */
-  --color-apple-blue-deep: #0056b3;
-
-  /* ─── Apple Typography & Muted Grays ─── */
-  --color-apple-text-dark: #f5f5f7;
-  --color-apple-text-dark-muted: #86868b;
-  --color-apple-text-light: #1d1d1f;
-  --color-apple-text-light-muted: #6e6e73;
-
-  /* ─── Standard Semantic Mappings ─── */
-  --color-background: #000000;
-  --color-foreground: #f5f5f7;
-  --color-primary: #0071e3;
-  --color-primary-foreground: #ffffff;
-  --color-muted: #1d1d1f;
-  --color-muted-foreground: #86868b;
-  --color-border: rgba(255, 255, 255, 0.10);
-
-  /* ─── Geometry ─── */
-  --radius-sm: 12px;
-  --radius-md: 20px;
-  --radius-lg: 28px;
-  --radius-full: 9999px;
-
-  /* ─── Fonts ─── */
-  --font-sans: var(--font-inter), -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Helvetica Neue", sans-serif;
-}
-
-/* ─── Global Reset & Apple Typography ─── */
-html {
-  scroll-behavior: smooth;
-  background-color: #000000;
-  color: #f5f5f7;
-}
-
-body {
-  font-family: var(--font-sans);
-  background-color: #000000;
-  color: #f5f5f7;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  overflow-x: hidden;
-  margin: 0;
-  padding: 0;
-  text-rendering: optimizeLegibility;
-}
-
-::selection {
-  background-color: #0071e3;
-  color: #ffffff;
-}
-
-/* ─── Apple Liquid Glass & Material Depth ─── */
-.apple-glass-dark {
-  background: rgba(14, 15, 19, 0.72);
-  backdrop-filter: blur(28px) saturate(190%);
-  -webkit-backdrop-filter: blur(28px) saturate(190%);
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  box-shadow: 0 12px 40px -10px rgba(0, 0, 0, 0.6), inset 0 1px 0 0 rgba(255, 255, 255, 0.14);
-}
-
-.apple-glass-light {
-  background: rgba(255, 255, 255, 0.82);
-  backdrop-filter: blur(28px) saturate(190%);
-  -webkit-backdrop-filter: blur(28px) saturate(190%);
-  border: 1px solid rgba(0, 0, 0, 0.08);
-  box-shadow: 0 12px 36px -8px rgba(0, 0, 0, 0.06), inset 0 1px 0 0 rgba(255, 255, 255, 0.95);
-}
-
-.apple-card-dark {
-  background: #0d0e12;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 24px;
-}
-
-.apple-card-light {
-  background: #ffffff;
-  border: 1px solid rgba(0, 0, 0, 0.06);
-  border-radius: 24px;
-}
-
-/* ─── Apple Cinema Display 3D Bezel ─── */
-.apple-cinema-bezel {
-  background: #0c0d10;
-  border: 2px solid #23262d;
-  box-shadow:
-    0 25px 60px -15px rgba(0, 0, 0, 0.85),
-    inset 0 1px 1px rgba(255, 255, 255, 0.25),
-    inset 0 -2px 4px rgba(0, 0, 0, 0.8);
-}
-
-.apple-glow-ambient {
-  box-shadow: 0 0 120px -20px rgba(41, 151, 255, 0.28);
-}
-
-/* ─── Typography Utility Classes ─── */
-.apple-heading-hero {
-  letter-spacing: -0.035em;
-  line-height: 1.04;
-}
-
-.apple-heading-section {
-  letter-spacing: -0.028em;
-  line-height: 1.08;
-}
-
-.apple-kicker {
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-}
-
-/* ─── Marquee Animations ─── */
-@keyframes marquee {
-  from {
-    transform: translateX(0);
+  html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    scroll-snap-type: y proximity;
   }
-  to {
-    transform: translateX(calc(-100% - var(--gap)));
+  
+  body {
+    background-color: #ffffff;
+    color: #141414;
+    font-feature-settings: 'ss03', 'cv01', 'cv11';
+  }
+  
+  ::selection {
+    background-color: #141414;
+    color: #ffffff;
   }
 }
 
-@keyframes marquee-vertical {
-  from {
-    transform: translateY(0);
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
   }
-  to {
-    transform: translateY(calc(-100% - var(--gap)));
+  
+  .glass-surface {
+    background: rgba(255, 255, 255, 0.72);
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+    border: 1px solid rgba(255, 255, 255, 0.3);
   }
-}
-
-.animate-marquee {
-  animation: marquee var(--duration, 40s) linear infinite;
-}
-
-.animate-marquee-vertical {
-  animation: marquee-vertical var(--duration, 40s) linear infinite;
-}
-
-/* ─── 3D Specular Keyframes ─── */
-@keyframes pulse-ring {
-  0% {
-    transform: scale(0.95);
-    opacity: 0.8;
-  }
-  50% {
-    transform: scale(1.15);
-    opacity: 0.3;
-  }
-  100% {
-    transform: scale(0.95);
-    opacity: 0.8;
+  
+  .glass-dark {
+    background: rgba(20, 20, 20, 0.72);
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+    border: 1px solid rgba(255, 255, 255, 0.08);
   }
 }
 
-.animate-pulse-ring {
-  animation: pulse-ring 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+/* Smooth scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
 }
 
-/* ─── Reduced Motion Safety ─── */
-@media (prefers-reduced-motion: reduce) {
-  *,
-  ::before,
-  ::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
-  }
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #e0e0e0;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #adadad;
 }
